@@ -340,26 +340,41 @@ a {
     background-image: url(../image/work/1.png);
     background-repeat: no-repeat;
     width: 25%;
+    transition: .3s;
 }
 .Our-Work-container-2 {
     background-image: url(../image/work/2.png);
     background-repeat: no-repeat;
     width: 25%;
+    transition: .3s;
 }
 .Our-Work-container-4 {
     background-image: url(../image/work/4.png);
     background-repeat: no-repeat;
     width: 25%;
+    transition: .3s;
 }
 .Our-Work-container-5 {
     background-image: url(../image/work/5.png);
     background-repeat: no-repeat;
     width: 25%;
+    transition: .3s;
 }
 .Our-Work-container-7 {
     background-image: url(../image/work/7.png);
     background-repeat: no-repeat;
     width: 25%;
+    transition: .3s;
+}
+.Our-Work-container-1:hover,
+.Our-Work-container-2:hover,
+.Our-Work-container-3:hover,
+.Our-Work-container-4:hover,
+.Our-Work-container-5:hover,
+.Our-Work-container-6:hover,
+.Our-Work-container-7:hover,
+.Our-Work-container-8:hover {
+    transform: translate(-3px,-3px);
 }
 .Facebook-analisis {
     width: 1400px;
