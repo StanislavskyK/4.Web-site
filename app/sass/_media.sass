@@ -1,0 +1,128 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+    h1
+        font-size: 70px
+    h2
+        font-size: 40px
+    h3
+        font-size: 30px
+    h5
+        font-size: 13px
+    .nav-center__line
+        display: none
+    .nav-info
+        img
+            margin-right: 20px
+    .hidden-md
+        display: none
+    .button
+        width: 180px
+        height: 50px
+        border: 1px double #fff
+        p
+            font-size: 13px
+        .fa
+            font-size: 15px
+    .header-carousel
+        p
+            font-size: 50px
+    .list-three__video-container
+        .video-container__img
+            width: 150px
+            height: 150px
+// ≥768px
++media-breakpoint-down(sm)
+    h1
+        font-size: 50px
+    h2
+        font-size: 35px
+    h3
+        font-size: 25px
+    h5
+        font-size: 12px
+    .nav-info
+        img
+            margin-right: 15px
+    .hidden-sm
+        display: none
+    .header-composition
+        margin-top: 150px
+    .header-composition-center__txt
+        font-size: 10px
+    .header-composition-right
+        p
+            font-size: 10px
+    .button
+        margin-top: 30px
+        width: 160px
+        height: 50px
+    .header-carousel
+        p
+            font-size: 45px
+    .list-one
+        display: block
+    .list-two
+        display: block
+    .Video__composition-container .list-one__container .list-one__h2 h2
+        line-height: 30px
+    .list-one__h2
+        h2
+            font-size: 18px
+            letter-spacing: 2px
+    .list-one__container
+        .button
+            margin-left: 20px
+        .list-one__p
+            display: none
+
+    .Video__composition-container .list-one__container .button p
+        font-size: 10px
+    .list-one__container
+        .button
+            p
+                text-align: center
+                line-height: 20px
+// ≥576px
++media-breakpoint-down(xs)
+    h1
+        font-size: 30px
+    h2
+        font-size: 25px
+    .nav-info
+        img
+            margin-right: 10px
+    .hidden-xs
+        display: none
+    .button
+        width: 140px
+        height: 50px
+        p
+            font-size: 8px
+    .header-carousel
+        p
+            font-size: 35px
+    .Video__composition-container .list-one__container .button
+        margin-left: 55px
+    .footer__container
+        margin-left: 0px
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

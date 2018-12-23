@@ -1,0 +1,675 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+h1
+  font-family: ProximaNova
+  font-size: 100px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: 1
+  letter-spacing: 20px
+  color: $accent
+h2
+  font-family: ProximaNova
+  font-size: 48px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: 2.08
+  letter-spacing: 3.4px
+  color: #010101
+h3
+  font-family: ProximaNova
+  font-size: 36px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: normal
+  letter-spacing: 10.8px
+  text-align: center
+  color: #ffffff
+h5
+  font-family: ProximaNova
+  font-size: 15px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.8
+  letter-spacing: 0.4px
+  color: rgba(255, 255, 255, 0.5)
+p
+  font-family: ProximaNova
+  font-size: 15px
+  font-weight: normal
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.67
+  letter-spacing: 0.4px
+  color: $text
+.button
+	display: flex
+	justify-content: center
+	align-items: center
+	background: none
+	width: 220px
+	height: 60px
+	border: 2px double #fff
+	transition: .3s ease
+	&:hover
+		background-color:  $text
+		transform: translateY(-2px)
+		border: 1px double $accent
+		p
+			&:hover
+			color: $accent
+		.fa
+			&:hover
+			color: $accent
+	p
+		font-family: roboto-example
+		color:  #fff
+		font-size: 15px
+		text-transform: uppercase
+		margin-top: 14px
+	.fa
+		font-size: 17px
+		color: #fff
+		margin-left: 15px
+		margin-bottom: 3px
+.hidden-small
+
+
+//  HEADER
+
+
+
+
+header
+	position: relative
+	height: 100vh
+	width: 100vw
+
+.header-nav
+	padding-left: 30px
+	padding-right: 30px
+	padding-top: 15px
+	width: 100%
+	position: absolute
+	z-index: 5
+	display: flex
+	align-items: center
+	justify-content: space-between
+.nav-menu
+	display: flex
+	h5
+		margin-top: 8px
+		margin-left: 7px
+		transition: .3s ease
+		&:hover
+			transform: translateY(-2px)
+.nav-menu__icon
+	transition: .3s ease
+	&:hover
+		transform: translateY(-2px)
+.nav-menu__icon-line
+  width: 33px
+  height: 1px
+  background-color: $accent
+  margin-top: 10px
+.nav-center
+	display: flex
+	justify-content: center
+	align-items: center
+	h5
+		padding-left: 50px
+		transition: .3s ease
+		&:hover
+			transform: translateY(-2px)
+.nav-center__line
+  position: absolute
+  top: 35px
+  margin-left: 43px
+  width: 64px
+  height: 4px
+  background-color: $accent
+.nav-info
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		margin-right: 30px
+		transition: .3s ease
+		&:hover
+			transform: translateY(-2px)
+	select
+		border: none
+		outline: none
+		background-color: inherit
+		color: rgba(255, 255, 255, 0.5)
+		transition: .3s ease
+		&:hover
+			transform: translateY(-2px)
+		option
+			background-color: rgba(255, 255, 255, 0.5)
+.header-left
+	width: 50%
+	height: 100vh
+	position: absolute
+	right: 0
+	.header-left-background
+		width: 50%
+		height: 100vh
+		position: absolute
+		background-size: cover
+		background-position: center
+		img
+			height: 100%
+			width: 100%
+	::before
+	  content: ''
+	  position: absolute
+	  top: 0
+	  left: 0
+	  right: 0
+	  bottom: 0
+	  background-color: rgba(0,0,0,0.8)
+	  z-index: 1
+.header-Right
+	width: 50%
+	height: 100vh
+	position: absolute
+	right: 0
+	.header-right-background
+		width: 50%
+		height: 100vh
+		position: absolute
+		background-size: cover
+		background-position: center
+		img
+			height: 100%
+			width: 100%
+		.bx-clone
+
+	::before
+	  content: ''
+	  position: absolute
+	  top: 0
+	  left: 0
+	  right: 0
+	  bottom: 0
+	  background-color: rgba(0,0,0,0.8)
+	  z-index: 1
+.header-left__container
+	.bx-wrapper
+		width: 50%
+		height: 100vh
+		position: absolute
+		left: 0
+		background: none
+		border: none
+		box-shadow: none
+		position: absolute
+		z-index: 2
+		margin-bottom: 0px
+
+.header-right__container
+	.bx-wrapper
+		width: 50%
+		height: 100vh
+		position: absolute
+		background: none
+		border: none
+		box-shadow: none
+		position: absolute
+		z-index: 2
+		right: 0
+		margin-bottom: 0px
+.header-composition-left__container
+	.bx-wrapper
+		position: absolute
+		background: none
+		border: none
+		box-shadow: none
+		position: absolute
+		z-index: 2
+		right: 0
+.header-composition
+	margin-top: 250px
+
+.header-composition-left
+	div
+		color: #fff
+.header-carousel
+	display: flex
+	justify-content: center
+	p
+	  font-family: ProximaNova
+	  font-size: 65px
+	  font-weight: bold
+	  font-style: normal
+	  font-stretch: normal
+	  line-height: normal
+	  letter-spacing: normal
+	  text-align: left
+	  color: $accent
+.bx-wrapper .bx-pager.bx-default-pager
+	a
+		background: #303030
+.bx-wrapper .bx-pager.bx-default-pager
+	a.active
+		background: $accent
+.header-composition-center
+	position: absolute
+	z-index: 3
+.header-composition-center__mouse
+	transition: .3s ease
+	display: flex
+	flex-direction: column
+	align-items: start
+	margin-top: 75px
+
+	&:hover
+		transform: translateY(-1px)
+	.fa
+		font-size: 22px
+		padding-top: 15px
+		padding-left: 7px
+		color: #fff
+.center__mouse
+	color: #fff
+.header-composition-center__txt
+	margin-top: 18px
+	margin-left: -21px
+	transform: rotate(90deg)
+	p
+		letter-spacing: 3px
+.header-composition-right
+	right: 0
+	transform: rotate(90deg)
+	color: rgba(190, 166, 124, 0.2)
+	position: absolute
+	z-index: 3
+	margin-top: 90px
+
+
+
+// List
+
+
+
+
+.List__01
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	position: absolute
+	top: 340px
+	left: 80px
+	p
+	  font-family: ProximaNova
+	  font-size: 36px
+	  font-weight: bold
+	  font-style: normal
+	  font-stretch: normal
+	  line-height: 2.78
+	  letter-spacing: 2.7px
+	  text-align: left
+	  color: #000000
+.List__02
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	position: absolute
+	top: 940px
+	right: 70px
+	p
+	  font-family: ProximaNova
+	  font-size: 36px
+	  font-weight: bold
+	  font-style: normal
+	  font-stretch: normal
+	  line-height: 2.78
+	  letter-spacing: 2.7px
+	  text-align: left
+	  color: #000000
+.List__line
+  width: 4px
+  height: 51px
+  background-color: #a9946e
+.List
+	margin-top: 70px
+.list-one
+	display: flex
+	justify-content: center
+	align-items: center
+.list-one__container
+	.list-one__h2, .list-one__p
+		display: flex
+		justify-content: center
+		align-items: center
+	.button
+		border: none
+		margin-left: 108px
+		p
+		  font-family: ProximaNova
+		  font-size: 14px
+		  font-weight: bold
+		  font-style: normal
+		  font-stretch: normal
+		  line-height: 5
+		  letter-spacing: 2.8px
+		  text-align: left
+		  color: #000000
+		.fa
+		  color: $accent
+		&:hover
+			background: none
+.list-one__h2
+	margin-right: 88px
+.list-one__h2-line
+  width: 151px
+  height: 1px
+  background-color: #000000
+  margin-right: 31px
+  margin-bottom: 3px
+.list-one__p
+	margin-left: 97px
+.list-one__p-line
+  width: 44px
+  height: 4px
+  background-color: $accent
+  margin-right: 31px
+  margin-bottom: 67px
+.list-one__photo
+	height: 400px
+	background-image: url(../img/List/List-1.jpg)
+	box-shadow: 0 0 14.6px 1.4px rgba(0, 0, 0, 0.25)
+	background-size: cover
+	background-position: center
+.list-two
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: row-reverse
+	margin-top: 200px
+.list-two__photo
+	height: 400px
+	background-image: url(../img/List/List-2.jpg)
+	box-shadow: 0 0 14.6px 1.4px rgba(0, 0, 0, 0.25)
+.list-two__h2
+	margin-left: 190px
+.list-two__p
+	p
+		padding-left: 45px
+		text-align: right
+.list-two__h2-line
+  width: 151px
+  height: 1px
+  background-color: #000000
+  margin-left: 27px
+  margin-bottom: 3px
+.list-two__p-line
+  width: 44px
+  height: 4px
+  background-color: $accent
+  margin-left: 31px
+  margin-right: 110px
+  margin-bottom: 67px
+.list-two__container
+	div
+		display: flex
+		justify-content: center
+		align-items: center
+	.button
+		float: right
+		margin-right: 118px
+		border: none
+		p
+		  font-family: ProximaNova
+		  font-size: 14px
+		  font-weight: bold
+		  font-style: normal
+		  font-stretch: normal
+		  line-height: 5
+		  letter-spacing: 2.8px
+		  text-align: left
+		  color: #000000
+		.fa
+		  color: $accent
+		&:hover
+			background: none
+.list-three
+	margin-top: 200px
+	margin-bottom: 100px
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	p
+		text-align: center
+.list-three__line
+  width: 44px
+  height: 4px
+  background-color: $accent
+  margin-bottom: 25px
+.list-three__video
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-top: 50px
+.list-three__video-container
+	transition: .3s ease
+
+	&:hover
+		transform: translateY(-2px)
+	p
+		margin-top: 20px
+	.video-container__img
+		width: 240px
+		height: 240px
+		border-radius: 50%
+		background-size: cover
+		background-position: center
+		display: flex
+		justify-content: center
+		align-items: center
+		box-shadow: 0 0 14.6px 1.4px rgba(0, 0, 0, 0.25)
+		.video-container__play
+			border-radius: 50%
+			width: 68px
+			height: 68px
+			opacity: 0.8
+			background-color: $accent
+			align-items: center
+			display: flex
+			justify-content: center
+			i
+				font-size: 42px
+				padding-left: 6px
+				color: #fff
+			transition: .3s ease
+			&:hover
+				transform: translateY(-2px)
+
+
+
+//  Video
+
+
+
+.Video
+	margin-top: 0px
+	height: 100vh
+	position: relative
+.Video-container__Background-two
+	background-image: url(../img/Video/Video-2.png)
+	background-size: cover
+	background-position: center
+	position: absolute
+	width: 45%
+	height: 85vh
+	z-index: 5
+	right: 100px
+	margin-top: 50px
+.Video-container
+	width: 100%
+	height: 100vh
+	min-height: 300px
+	position: absolute
+	.Video-container__Background
+		width: 100%
+		height: 100vh
+		position: relative
+		background-size: cover
+		background-position: center
+		img
+			height: 100%
+			width: 100%
+	::before
+	  content: ''
+	  position: absolute
+	  top: 0
+	  left: 0
+	  right: 0
+	  bottom: 0
+	  background-color: rgba(0,0,0,0.8)
+	  z-index: 1
+.Video__composition
+	width: 80%
+	height: 80%
+	border: 1px double $accent
+	z-index: 5
+	position: relative
+	left: 10%
+	top: 10%
+.Video__composition-container
+	margin-top: 135px
+	.list-one__container
+		.list-one__h2
+			div
+				background-color: #ffffff
+				margin-left: 45px
+			h2
+				text-transform: uppercase
+				color: $accent
+				line-height: 50px
+		.list-one__p
+
+			div
+				margin-top: 45px
+			p
+				color: #fff
+		.button
+			border: 2px double #fff
+			margin-left: 155px
+			p
+				color: #fff
+				line-height: 1
+			.fa
+				color: #fff
+
+
+
+//  about
+
+
+
+.about
+	margin-top: 75px
+	margin-bottom: 75px
+.about-composition__photo
+	height: 400px
+	background-size: cover
+	background-position: center
+	box-shadow: 0 0 14.6px 1.4px rgba(0, 0, 0, 0.25)
+	background-image: url(../img/about/about.png)
+.about-composition
+	display: flex
+.about-composition-text
+	position: absolute
+	.list-one__container
+		.list-one__h2
+			padding-right: 70px
+
+
+
+// footer
+
+
+footer
+	height: 70px
+.footer-photo
+	width: 100%
+	height: 70px
+	position: absolute
+	right: 0
+	.footer-photo-container
+		width: 100%
+		height: 70px
+		img
+			height: 100%
+			width: 100%
+			background-position: center
+			object-fit: cover
+	::before
+	  content: ''
+	  position: absolute
+	  top: 0
+	  left: 0
+	  right: 0
+	  bottom: 0
+	  background-color: rgba(0,0,0,0.8)
+	  z-index: 1
+.footer__container
+	margin-top: 20px
+	position: absolute
+	z-index: 5
+	display: flex
+	align-items: center
+	justify-content: space-around
+	margin-left: -50px
+	p
+		color: #fff
+	h3
+		line-height: 1
+
+@import "media" // Always at the end
